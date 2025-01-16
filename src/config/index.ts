@@ -6,10 +6,10 @@ export const HOME_URL: string = "/home/index";
 export const LOGIN_URL: string = "/login";
 
 // pinia仓库前缀
-export const PINIA_PREFIX: string = "xy-";
+export const PINIA_PREFIX: string = "pinia-";
 
 // Svg本地图片使用 koi- 开头才会生效
-export const SVG_PREFIX: string = "xy-";
+export const SVG_PREFIX: string = "svg-";
 
 // 默认主题颜色
 export const DEFAULT_THEME: string = "#2992FF";
@@ -18,5 +18,5 @@ export const DEFAULT_THEME: string = "#2992FF";
 export const ROUTER_WHITE_LIST: string[] = ["/500", "/download"];
 
 // 高德地图账号密码
-export const AMapKey: string = "5a06dba633571bd9d72fe4799b13437f";
-export const securityJsCode: string = "d1eeb6897cd09aa9d9b0d62212a613d1";
+export const AMapKey: string = "";
+export const securityJsCode: string = "";
