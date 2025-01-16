@@ -1,0 +1,41 @@
+@use "./element-plus/index.scss";
+// 引入清除默认样式
+@use "./reset.scss";
+// 进度条配置
+@use "./nprogress.scss";
+
+@use "@/assets/fonts/font.css";
+
+* {
+    font-family: "SourceHanSansCN-Light", serif;
+    box-sizing: border-box;
+}
+
+.sdu-icon {
+    outline: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+:root {
+    --el-menu-hover-text-color: var(--el-color-primary);
+    --el-menu-hover-bg-color: var(--el-color-primary-light-8);
+    --el-menu-active-text-color: var(--el-color-primary);
+    --el-menu-active-bg-color: var(--el-color-primary-light-8);
+    --el-menu-border-left-color: var(--el-color-primary);
+}
+
+//div自适应
+.sdu-flex {
+    @apply flex flex-col flex-1 h-100%;
+}
+
+.error-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

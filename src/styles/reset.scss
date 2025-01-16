@@ -1,0 +1,30 @@
+html,
+body,
+#app {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* 去除a链接下划线 #409EFF */
+a {
+    color: var(--el-color-primary);
+    text-decoration: none;
+    outline: 0;
+}
+a:hover {
+    color: #0a16f1;
+}
+
+.pagination-box {
+    .el-pagination {
+        justify-content: flex-end;
+    }
+}
+
+
+.reset-form-state {
+    .el-form-item {
+        margin-bottom: 0;
+    }
+}
