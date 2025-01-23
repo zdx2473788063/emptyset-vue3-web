@@ -3,7 +3,6 @@
         <div class="dialog-content" ref="dialogContentRef" @click.stop>
             <!-- 左侧内容 -->
             <div class="left-container" :style="{ width: mediaWidth + 'px' }">
-                <!-- <img :src="imageUrl" alt="" /> -->
                 <slot name="left"></slot>
             </div>
             <!-- 右侧内容 -->
@@ -181,11 +180,6 @@
                 flex-grow: 1;
                 border-radius: 0 20px 20px 0;
                 overflow: hidden;
-                img {
-                    max-width: 100%;
-                    max-height: 100%;
-                    object-fit: contain;
-                }
             }
         }
     }
