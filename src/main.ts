@@ -17,12 +17,12 @@ import pinia from "./stores/index.ts";
 // 引入styles
 import "@/styles/index.scss";
 // permission control
-// import "@/config/permission";
+import "@/config/permission";
 // SVG插件配置
 import "virtual:svg-icons-register";
 
 // 引入全局自定义指令
-import sduDirectives from "@/directives/index";
+import directives from "@/directives/index";
 // uncoss防止覆盖ElementPlus 的 el-button的css，所有放置最下方
 import "uno.css";
 
@@ -41,6 +41,6 @@ app.use(router);
 // 注册pinia
 app.use(pinia);
 // 注册全局自定义指令
-app.use(sduDirectives);
+app.use(directives);
 // 挂载
 app.mount("#app");

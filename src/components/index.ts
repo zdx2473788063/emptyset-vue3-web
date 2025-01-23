@@ -1,20 +1,18 @@
-import sduDialog from "./sduDialog/index.vue";
+import iDialog from "./i-dialog/index.vue";
 // 这个是本地svg的icon组件
-import sduIcon from "./sduIcon/index.vue";
+import iIcon from "./i-icon/index.vue";
 // 这个是基于element-ui的icon组件 二次封装
-import sduGlobalIcon from "./sduGlobalIcon/index.vue";
-import sduSelectIcon from "./sduSelectIcon/index.vue";
+import iGlobalIcon from "./i-globalIcon/index.vue";
+import iSelectIcon from "./i-selectIcon/index.vue";
 
-import sduLayoutContent from "./sduLayoutContent/index.vue";
+import iLayoutContent from "./i-layoutContent/index.vue";
 
-import sduDictTag from "./sduDictTag/index.vue";
+import iDictTag from "./i-dictTag/index.vue";
 
-import sduTimeline from "./sduTimeline/index.vue";
+import iRecall from "./i-recall/index.vue";
 
-import sduArea from "./sduArea/map.vue";
+import iCard from "./i-card/index.vue";
 
-import sduMap from "./sduMap/index.vue";
+import iTip from "./i-tip/index.vue";
 
-import sduRecall from "./sduRecall/index.vue";
-
-export { sduDialog, sduIcon, sduGlobalIcon, sduSelectIcon, sduLayoutContent, sduDictTag, sduTimeline, sduArea, sduMap, sduRecall };
+export { iDialog, iIcon, iGlobalIcon, iSelectIcon, iLayoutContent, iDictTag, iRecall, iCard, iTip };

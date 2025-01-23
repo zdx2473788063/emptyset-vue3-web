@@ -4,7 +4,7 @@
         <!-- 非叶子节点 -->
         <el-sub-menu v-if="item.children?.length" :index="item.path">
             <template #title>
-                <!-- <sdu-icon v-if="props?.collapse" name="sdu-menu-left" width="20" height="20"></sdu-icon> -->
+                <!-- <i-icon v-if="props?.collapse" name="sdu-menu-left" width="20" height="20"></i-icon> -->
                 <span v-text="item.meta?.title"></span>
             </template>
             <aside-sub-menu :menu-list="item.children" />
@@ -12,7 +12,7 @@
         <!-- 叶子节点[功能节点] -->
         <el-menu-item v-else :index="item.path" @click="handleMenuRouter(item)">
             <template #title>
-                <!-- <sdu-icon v-if="props?.collapse" name="sdu-menu-left" width="20" height="20"></sdu-icon> -->
+                <!-- <i-icon v-if="props?.collapse" name="sdu-menu-left" width="20" height="20"></i-icon> -->
                 <span v-text="item.meta?.title"></span>
             </template>
         </el-menu-item>
@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-    // import { sduIcon } from "@/components";
+    // import { iIcon } from "@/components";
     import { useRouter } from "vue-router";
 
     defineOptions({

@@ -6,7 +6,7 @@
     import { getDictOptions } from "@/utils/dict.ts";
 
     defineOptions({
-        name: "SduDictTag"
+        name: "IDictTag"
     });
 
     const props = defineProps({

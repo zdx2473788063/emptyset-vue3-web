@@ -1,10 +1,10 @@
 <template>
-    <sdu-global-icon class="m-r-10px sdu-icon" name="Sunny" :size="22" v-if="!globalStore.isDark" @click="handleSwitchDark" />
-    <sdu-global-icon class="m-r-10px sdu-icon" name="Moon" :size="22" v-if="globalStore.isDark" @click="handleSwitchDark" />
+    <i-global-icon class="m-r-10px sdu-icon" name="Sunny" :size="22" v-if="!globalStore.isDark" @click="handleSwitchDark" />
+    <i-global-icon class="m-r-10px sdu-icon" name="Moon" :size="22" v-if="globalStore.isDark" @click="handleSwitchDark" />
 </template>
 
 <script setup lang="ts">
-    import { sduGlobalIcon } from "@/components";
+    import { iGlobalIcon } from "@/components";
     import useGlobalStore from "@/stores/modules/global.ts";
     import { useTheme } from "@/hooks/theme.ts";
 

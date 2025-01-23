@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
     defineOptions({
-        name: "SduLayoutContent"
+        name: "ILayoutContent"
     });
 </script>
 

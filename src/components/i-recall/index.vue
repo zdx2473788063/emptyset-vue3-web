@@ -1,5 +1,5 @@
 <template>
-    <sdu-dialog v-model="modelVisible" title="撤回" align-center width="350">
+    <i-dialog v-model="modelVisible" title="撤回" align-center width="350">
         <div v-loading="formLoading">
             <div>确定要撤回正在进行中的任务？</div>
             <el-checkbox v-model="formState.isReserve" label="保留任务数据" />
@@ -10,11 +10,11 @@
                 <el-button :disabled="formLoading" type="primary" @click="handleSubmit"> 确定 </el-button>
             </div>
         </template>
-    </sdu-dialog>
+    </i-dialog>
 </template>
 
 <script setup lang="ts">
-    import { sduDialog } from "@/components";
+    import { iDialog } from "@/components";
     import { ref, reactive } from "vue";
     import { ElMessage } from "element-plus";
     import { postRecallTask } from "@/api";

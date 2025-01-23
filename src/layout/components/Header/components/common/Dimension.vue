@@ -1,6 +1,6 @@
 <template>
     <el-dropdown trigger="click" @command="handleSizeChange">
-        <sdu-global-icon class="m-r-10px sdu-icon" :size="22" name="ElementPlus" />
+        <i-global-icon class="m-r-10px sdu-icon" :size="22" name="ElementPlus" />
         <template #dropdown>
             <el-dropdown-menu>
                 <el-dropdown-item v-for="item in dimensionList" :key="item.value" :command="item.value" :disabled="dimensionSize === item.value">
@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-    import { sduGlobalIcon } from "@/components";
+    import { iGlobalIcon } from "@/components";
     import { computed } from "vue";
     import useGlobalStore from "@/stores/modules/global.ts";
     import { ElMessage } from "element-plus";

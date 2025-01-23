@@ -2,7 +2,7 @@
     <el-select :model-value="inputValue" placeholder="请选择图标" clearable @clear="() => emit('update:modelValue', '')" class="w-200px">
         <el-option v-for="(item, index) in nameList" :key="index" :label="item" :value="item">
             <div class="w-full flex justify-center" @click="() => emit('update:modelValue', item)">
-                <sdu-icon :name="item" width="35" height="35"></sdu-icon>
+                <i-icon :name="item" width="35" height="35"></i-icon>
             </div>
         </el-option>
     </el-select>
@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
     import { onMounted, ref, toRef } from "vue";
-    import { sduIcon } from "@/components";
+    import { iIcon } from "@/components";
     const nameList = ref<string[]>([]);
     const getLayerBgs = function () {
         // 获取所有背景图层
