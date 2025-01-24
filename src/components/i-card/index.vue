@@ -1,6 +1,11 @@
 <template>
     <div class="dialog" v-if="showMask" @click="closeDialog" ref="dialogRef">
-        <div class="dialog-content" ref="dialogContentRef" @click.stop>
+        <button ref="closeBtn" class="backPage" @click.stop="closeDialog">
+            <el-icon :size="20">
+                <Close />
+            </el-icon>
+        </button>
+        <div class="dialog-content" @click.stop>
             <!-- 左侧内容 -->
             <div class="left-container" :style="{ width: mediaWidth + 'px' }">
                 <slot name="left"></slot>
@@ -107,7 +112,9 @@
         });
     };
 
+    const closeBtn = ref();
     const closeDialog = () => {
+        closeBtn.value.style.display = "none";
         // F: 记录初始状态
         const dialogFirstInfo = dialogNode?.getBoundingClientRect() as DOMRect;
         // L：设置到最终态
@@ -157,16 +164,32 @@
         background-color: transparent;
         transition: background-color 0.4s;
         z-index: 9999;
+        .backPage {
+            position: fixed;
+            top: 5%;
+            left: 3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            border: 1px solid #999;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 2;
+        }
         .dialog-content {
             display: flex;
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: calc(50% + 160px);
             transform: translate(-50%, -50%) scale(1);
             height: calc(100% - 64px);
             background-color: #fff;
             border-radius: 20px;
             overflow: visible;
+            z-index: 1;
             .left-container {
                 flex-shrink: 0;
                 flex-grow: 0;
